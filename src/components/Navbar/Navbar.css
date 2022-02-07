@@ -1,0 +1,40 @@
+nav{
+    width: 100%;
+    height: 70px;
+    background-color: #282828;
+}
+
+h1{
+    position: absolute;
+    padding: 3px;
+    float: left;
+    margin-left: 2%;
+    margin-top: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+ul{
+    width: auto;
+    float: right;
+    margin-top: 8px;
+}
+
+li{
+    display: inline-block;
+    padding: 15px 30px;
+}
+
+a{
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2vw;
+}
+
+a:hover{
+    color: #FFBC42;
+    transition: 0.5s;
+}
+
