@@ -2,10 +2,10 @@ import "./CardWidget.css"
 
 const CardWidget = () => {
     return (
-        <div className='counterCarrito'>
-            <img src='http://cdn.onlinewebfonts.com/svg/img_297674.png' className='Cart'></img>
-            <p className='numberCarrito'> 0 </p>
-        </div>
+        <>
+            <img className="carrito" src='http://cdn.onlinewebfonts.com/svg/img_297674.png'></img>
+            <p className="productos">0</p>
+        </>
         
     )   
 }
