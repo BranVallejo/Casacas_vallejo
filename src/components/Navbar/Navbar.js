@@ -1,17 +1,25 @@
 import "./Navbar.css"
+import Button from "../Button/Button";
+import CardWidget from "../CardWidget/CardWidget";
+import "../CardWidget/CardWidget.css"
+
+
 
 const Navbar = () =>{
     return (
       <nav>
           <h1>CASACAS</h1>
           <ul>
-              <li><a href="#">Inicio</a></li>
-              <li><a href="#">Premier League</a></li>
-              <li><a href="#">LaLiga</a></li>
-              <li><a href="#">Vintage</a></li>
+              <Button label="Inicio" backgroundColor="#282828" colorText="White"/>
+              <Button label="Premier League" backgroundColor="#00ff85" colorText="#38003c"/>
+              <Button label="LaLiga" backgroundColor="#ffe000" colorText="White"/>
+              <Button label="Vintage" backgroundColor="#CC7952" colorText="#ESBD77"/>
+              <CardWidget />
+
+
           </ul>
       </nav>
     )
   }
 
-  export default Navbar
+  export default Navbar;
