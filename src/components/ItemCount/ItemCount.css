@@ -1,0 +1,7 @@
+.ConterBox{
+    border: 7px solid black;
+    width: max-content;
+    border-radius: 15%;
+    box-shadow: 7px 7px 5px gainsboro;
+    margin: 0 auto;
+}
