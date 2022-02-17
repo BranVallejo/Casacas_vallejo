@@ -1,16 +1,15 @@
 .Card{
     display: flex;
     flex-direction: column;
-    
-    border: 7px solid black;
+    border: 2px solid rgb(255, 255, 255);
     margin: 10px;
     border-radius: 10%;
-    box-shadow: 17px 17px 15px gainsboro;
+    box-shadow: 17px 17px 15px rgb(77, 56, 56);
     
 }
 
 .fotoProducto{
-    width: 600px;
+    width: 400px;
     border-radius: 10%;
 }
 
