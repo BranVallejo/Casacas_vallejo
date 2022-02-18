@@ -10,3 +10,9 @@ export const traerProductos = new Promise((resolve, reject)=>{
         resolve(products)
     }, 2000)
 });
+
+export const traerProduct = new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        resolve(products[0])
+    }, 2000)
+});
