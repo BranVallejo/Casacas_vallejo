@@ -8,17 +8,17 @@ import "../CardWidget/CardWidget.css"
 const Navbar = () =>{
     return (
       <nav>
-          <p className="titulo">CASACAS</p>
-          <ul>
-              <Button label="Inicio" backgroundColor="#282828" colorText="White"/>
-              <Button label="Premier League" backgroundColor="#00ff85" colorText="#38003c"/>
-              <Button label="LaLiga" backgroundColor="#ffe000" colorText="White"/>
-              <Button label="Vintage" backgroundColor="#CC7952" colorText="#ESBD77"/>
-              <CardWidget />
+          <div className="Botonera">
+              <p className="titulo" className="boton">CASACAS</p>
+              <Button className="boton" label="Inicio" />
+              <Button className="boton" label="Premier League" />
+              <Button className="boton" label="LaLiga" />
+              <Button className="boton" label="Vintage" />
+              <div className="boton"><CardWidget /></div>
               
 
 
-          </ul>
+          </div>
       </nav>
     )
   }
