@@ -20,7 +20,7 @@ const ItemCount = ({stock, initial}) =>{
 
     return(
         <>
-            <div className="ConterBox">
+            <div className="counterBox">
                 <h2 className="NombreProducto">Camiseta Barcelona Local</h2>
                 <h3>{count}</h3>
                 <div className="Botonera">

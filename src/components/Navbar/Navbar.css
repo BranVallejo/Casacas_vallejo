@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap');
 
 
-.Botonera{
+.botonera{
     background-color: #39393a;
     display: flex;
     flex-direction: row;
@@ -15,17 +15,31 @@
     margin: 1%;
 }
 
-.Botonera p{
+.logo{
     font-family: 'Ubuntu', sans-serif;
     font-size: 2.7vw;
     color: #E6E6E6;
+    margin: 1%;
+    text-decoration: none;
 }
 
-button{
+.categorias{
     width: auto;
     padding: 12px;
     font-size: 2vw;
     background: #ff8552;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #FFFFFF;
+    border-style: none;
+    cursor: pointer;
+}
+
+.categoriaActiva{
+    width: auto;
+    padding: 12px;
+    font-size: 2vw;
+    background: #0f8b8d;
     border-radius: 8px;
     text-decoration: none;
     color: #FFFFFF;

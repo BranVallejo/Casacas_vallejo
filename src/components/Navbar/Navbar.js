@@ -2,18 +2,18 @@ import "./Navbar.css"
 import Button from "../Button/Button";
 import CardWidget from "../CardWidget/CardWidget";
 import "../CardWidget/CardWidget.css"
-
+import { NavLink } from "react-router-dom";
 
 
 const Navbar = () =>{
     return (
       <nav>
-          <div className="Botonera">
-              <p className="titulo" className="boton">CASACAS</p>
-              <Button className="boton" label="Inicio" />
-              <Button className="boton" label="Premier League" />
-              <Button className="boton" label="LaLiga" />
-              <Button className="boton" label="Vintage" />
+          <div className="botonera">
+              <NavLink to={`/`} className="logo">CASACAS</NavLink>
+              <NavLink to={`/`} className="boton" className={({ isActive })=> isActive ? `categoriaActiva` : "categorias"}>Inicio</NavLink>
+              <NavLink to={`category/premierleague`} className="boton" className={({ isActive })=> isActive ? `categoriaActiva` : "categorias"}>Premier League</NavLink>
+              <NavLink to={`category/laliga`} className="boton" className={({ isActive })=> isActive ? `categoriaActiva` : "categorias"}>LaLiga</NavLink>
+              <NavLink to={`category/vintage`} className="boton" className={({ isActive })=> isActive ? `categoriaActiva` : "categorias"}>Vintage</NavLink>
               <div className="boton"><CardWidget /></div>
               
 
