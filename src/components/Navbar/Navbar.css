@@ -33,6 +33,11 @@
     color: #FFFFFF;
     border-style: none;
     cursor: pointer;
+    transition: ease-in 0.1s;
+}
+
+.categorias:hover{
+    border: 0.3vw solid #E6E6E6;
 }
 
 .categoriaActiva{
@@ -45,4 +50,9 @@
     color: #FFFFFF;
     border-style: none;
     cursor: pointer;
+    transition: ease-in 0.1s;
+}
+
+.categoriaActiva:hover{
+    border: 0.3vw solid #E6E6E6;
 }

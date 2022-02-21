@@ -11,10 +11,3 @@
 .carga{
     animation: rotation 1s infinite ease;
 }
-
-.itemDetailContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}

@@ -1,9 +1,10 @@
 import "./CardWidget.css"
+import {GrCart} from "react-icons/gr"
 
 const CardWidget = () => {
     return (
         <>
-            <img className="carrito" src='http://cdn.onlinewebfonts.com/svg/img_297674.png'></img>
+            <GrCart className="carrito" size={35}/>
             <h4 className="productos">0</h4>
         </>
         

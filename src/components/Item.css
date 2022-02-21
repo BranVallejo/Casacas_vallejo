@@ -59,3 +59,19 @@
     font-weight: 1000;
     font-family: 'Nunito', sans-serif;
 }
+
+.detalle{
+    bottom: 100px;
+    color: black;
+    border: 1px solid #0f8b8d;
+    width: 50px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: ease-in 0.1s;
+    text-decoration: none;
+}
+
+.detalle:hover{
+    background-color: #0f8b8d;
+    color: white;  
+}

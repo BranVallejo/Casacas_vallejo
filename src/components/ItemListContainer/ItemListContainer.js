@@ -4,13 +4,15 @@ import { traerProductos } from "../mock/products";
 import ItemList from "../ItemList";
 import { getCategory } from "../mock/products";
 import { useParams } from "react-router-dom";
+import {RiLoader4Line} from "react-icons/ri"
+import "./ItemListContainer.css"
 
 
 const ItemListContainer = ({greeting}) => {
     
     const [products, setProducts] = useState([])
-    // aaaaaaa
     const {categoryId} = useParams()
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         getCategory(categoryId).then((products) =>{
@@ -28,17 +30,21 @@ const ItemListContainer = ({greeting}) => {
         })
         traerProductos.finally(()=>{
             // Se ejecuta al final, siempre.
+            setLoading(false)
         })
     }, []);
     
 
     return (
         <>
-            <h1>{greeting}</h1>
-            <ItemList products={products}/>
-            
-            {/* <ItemCount stock={5} initial={1}/> */}
-
+            {loading ? (
+                <RiLoader4Line className="carga" size={250}/>
+            ) : (
+                <>
+                    <h1>{greeting}</h1>
+                    <ItemList products={products}/>            
+                </>
+            )}
         </>
     )
 }
