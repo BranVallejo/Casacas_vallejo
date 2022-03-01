@@ -1,7 +1,7 @@
 import {useState} from "react"
 import "./ItemCount.css"
 
-const ItemCount = ({stock, initial}) =>{
+const ItemCount = ({stock, initial, handleClick}) =>{
 
     const [count, setCount] = useState(0);
 
@@ -13,21 +13,20 @@ const ItemCount = ({stock, initial}) =>{
         count < stock ? setCount(count + 1) : alert("Alcanzaste el stock máximo");
     }
 
-    const Aniadir = () => {
-        count >= initial ? alert(`Agregaste ${count} productos al carrito`) : alert("No puedes agregar 0 productos al carrito")
+    // const Aniadir = () => {
+    //     count >= initial ? console.log(`Agregaste ${count} productos al carrito`) : alert("No puedes agregar 0 productos al carrito")
         
-    }
+    // }
 
     return(
         <>
             <div className="counterBox">
-                <h2 className="NombreProducto">Camiseta Barcelona Local</h2>
                 <h3>{count}</h3>
                 <div className="Botonera">
                     <button className="Decrement" onClick={Decrement}>-</button>
                     <button className="Increment" onClick={Increment}>+</button>
                 </div>
-                <button onClick={Aniadir}>Añadir al carrito</button>
+                <button onClick={handleClick}>Añadir al carrito</button>
             </div>
 
         </>
@@ -36,19 +35,3 @@ const ItemCount = ({stock, initial}) =>{
 }
 
 export default ItemCount;
-
-// Operadores ternarios expresados en if's:
-
-    // const increment = () => {
-    //     if (count < stock) {
-    //         setCount(count + 1);
-    //     }
-    // }
-
-        // const decrement = () => {
-    //     if (count > 0){
-    //         setCount(count - 1);
-    //     } else {
-    //         alert("No puedes tener productos negativos");
-    //     }
-    // }
