@@ -18,7 +18,7 @@ const ItemListContainer = ({greeting}) => {
         getCategory(categoryId).then((products) =>{
             setProducts(products)
         })
-    },[categoryId])
+    },[categoryId, products])
 
 
     useEffect(()=>{

@@ -5,8 +5,7 @@ import { Link } from "react-router-dom"
 
 const ItemDetail = ({product}) => {
     const[quantity, setQuantity] = useState(0)
-    const[compra, setCompra] = useState(5)
-
+    const[compraFinalizada, setCompraFinalizada] = useState(false)
 
     return(
         <div className="card">
@@ -17,10 +16,12 @@ const ItemDetail = ({product}) => {
             <p className="comprar">Agregar al carrito</p>
             <p>{product.description}</p> 
             {
-                compra > 3 ? (<ItemCount stock={product.stock} initial={1} handleClick={() => setCompra(compra - 5)}/>
+                !compraFinalizada ? (<ItemCount stock={product.stock} initial={1} handleClick={() => setCompraFinalizada(true)}/>
                     ) : (
                         <>
-                            <Link to={`/cart`}>Ir al carrito</Link>
+                            <Link to={`/cart`}>
+                                <button>Ir al carrito</button>
+                            </Link>
                         </>
                     )
             }
