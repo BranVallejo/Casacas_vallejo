@@ -1,9 +1,9 @@
 import {useState} from "react"
 import "./ItemCount.css"
 
-const ItemCount = ({stock, initial, handleClick}) =>{
+const ItemCount = ({stock, initial, onAdd}) =>{
 
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(initial);
 
     const Decrement = () => {
         count > 0 ? setCount(count - 1) : alert("No puedes tener productos negativos")
@@ -13,10 +13,6 @@ const ItemCount = ({stock, initial, handleClick}) =>{
         count < stock ? setCount(count + 1) : alert("Alcanzaste el stock máximo");
     }
 
-    // const Aniadir = () => {
-    //     count >= initial ? console.log(`Agregaste ${count} productos al carrito`) : alert("No puedes agregar 0 productos al carrito")
-        
-    // }
 
     return(
         <>
@@ -26,7 +22,7 @@ const ItemCount = ({stock, initial, handleClick}) =>{
                     <button className="Decrement" onClick={Decrement}>-</button>
                     <button className="Increment" onClick={Increment}>+</button>
                 </div>
-                <button onClick={handleClick}
+                <button onClick={() => onAdd(count)}
                 >Añadir al carrito</button>
             </div>
 

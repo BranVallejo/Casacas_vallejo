@@ -1,14 +1,19 @@
 import ItemCount from "../ItemCount/ItemCount"
-import { useContext, useState } from "react"
+import { useState, useContext } from "react"
 import { Link } from "react-router-dom"
-import CartContext from `../../context/CartContext`
+import { CartContext } from "../../context/CartContext"
 
 const ItemDetail = ({product}) => {
     const[quantity, setQuantity] = useState(0)
-    const[compraFinalizada, setCompraFinalizada] = useState(false)
+    const {addToCart} = useContext(CartContext)  
 
-    const {setCart} = useContext(CartContext)
+    const onAdd = (quantity) => {
+        setQuantity(quantity)
 
+        addToCart(product, quantity)
+    }
+
+// acaaaaaaa
     return(
         <div className="card">
         <div className="descripcionProducto">
@@ -18,14 +23,9 @@ const ItemDetail = ({product}) => {
             <p className="comprar">Agregar al carrito</p>
             <p>{product.description}</p> 
             {
-                !compraFinalizada ? (<ItemCount stock={product.stock} initial={1} handleClick={() => setCompraFinalizada(true)}/>
-                    ) : (
-                        <>
-                            <Link to={`/cart`}>
-                                <button>Ir al carrito</button>
-                            </Link>
-                        </>
-                    )
+                quantity > 0 ? (<><Link to={`/cart`}><button>Ir al carrito</button></Link></>)
+                 : 
+                 (<ItemCount stock={product.stock} initial={1} onAdd={onAdd}/>)
             }
         </div>
         
