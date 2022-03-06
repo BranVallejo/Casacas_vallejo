@@ -7,8 +7,9 @@ const ItemDetail = ({product}) => {
     const[quantity, setQuantity] = useState(0)
     const[compraFinalizada, setCompraFinalizada] = useState(false)
 
-    const onAdd = (quantity) => {
-        setQuantity(quantity)
+    const handleCheckout = (quantity) => {
+        setCompraFinalizada(true);
+        setQuantity(quantity);
     }
 
 
@@ -21,9 +22,12 @@ const ItemDetail = ({product}) => {
             <p className="comprar">Agregar al carrito</p>
             <p>{product.description}</p> 
             {
-                quantity > 0 ? (<><Link to={`/cart`}><button>Ir al carrito</button></Link></>)
-                 : 
-                 (<ItemCount stock={product.stock} initial={1} onAdd={onAdd}/>)
+                (compraFinalizada == false) ? (<ItemCount stock={product.stock} initial={1} onAdd={handleCheckout}/>
+                ) : (
+                    <>
+                        <Link to={`/cart`}><button>Ir al carrito</button></Link>
+                    </>
+                )
             }
         </div>
         
