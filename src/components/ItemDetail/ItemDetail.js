@@ -2,16 +2,20 @@ import ItemCount from "../ItemCount/ItemCount"
 import { useState, useContext } from "react"
 import { Link } from "react-router-dom"
 import { CartContext } from "../../context/CartContext"
+import NotificationContext from "../../services/notification/NotificationServices"
 
 const ItemDetail = ({product}) => {
     const[quantity, setQuantity] = useState(0)
     const[compraFinalizada, setCompraFinalizada] =useState(false)
     const {addToCart} = useContext(CartContext)  
+    const setNotification = useContext(NotificationContext)
 
     const handleCheckout = (quantity) => {
         setCompraFinalizada(true);
         setQuantity(quantity);
         addToCart(product, quantity)
+
+        setNotification(`success`, `Se agrego ${product.name} al carrito`)
     }
 
 
