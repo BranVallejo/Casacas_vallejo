@@ -6,7 +6,7 @@ import { getCategory } from "../mock/products";
 import { useParams } from "react-router-dom";
 import {RiLoader4Line} from "react-icons/ri"
 import "./ItemListContainer.css"
-
+import { useNoticationServices } from "../../services/notification/NotificationServices";
 
 const ItemListContainer = ({greeting}) => {
     
@@ -14,7 +14,11 @@ const ItemListContainer = ({greeting}) => {
     const {categoryId} = useParams()
     const [loading, setLoading] = useState(true)
 
+    const setNotification = useNoticationServices()
+
     useEffect(() => {
+        setNotification(`success`, `Bienvenido`)
+
         getCategory(categoryId).then((products) =>{
             setProducts(products)
         })

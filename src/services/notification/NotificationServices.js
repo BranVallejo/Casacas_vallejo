@@ -12,8 +12,8 @@ const Notification = ({message = "Prueba", severity}) => {
         height: `auto`,
         backgroundColor: `green`,
         padding: `10px 20px 10px 20px`,
-        color: `white`
-
+        color: `white`,
+        borderRadius: "10px"
     }
 
     if(message === ``) {
@@ -49,4 +49,6 @@ export const NotificationServicesProvider = ({children}) => {
     )
 }
 
-export default NotificationContext
+export const useNoticationServices = () =>{
+    return useContext(NotificationContext)
+}
