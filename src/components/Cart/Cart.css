@@ -85,27 +85,49 @@
 
 }
 
+.carritoVacio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .sinProductos{
-    color: white;
-    font-size: 30px;
-    margin-top: 22px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    width: 400px;
+    height: auto;
+    padding: 10px 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .volverInicio{
+    padding: 6px;
     background-color: #F5F5F5;
     bottom: 100px;
-    border: 1px solid rgb(32, 221, 79);
-    width: 250px;
-    margin-left: 18%;
-    padding: 5px;
+    border: 1px solid #2078dd;
     border-radius: 10px;
     transition: ease-in 0.1s;
+    color: #2078dd;
     cursor: pointer;
+    font-weight: 600;
+    box-shadow: 1px 1px 3px 2px rgb(0 0 0 / 27%); 
+    margin: 10px;
 }
 
 .volverInicio:hover{
-    background-color: rgb(32, 221, 79);
-    color: F5F5F5;
+    background-color: #2078dd;
+    color: #F5F5F5;
 }
 
 .itemInfo{

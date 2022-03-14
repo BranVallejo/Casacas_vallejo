@@ -11,10 +11,11 @@ const Cart = () => {
 
     if (cart.length === 0) {
         return (
-            <>
-                <div className="sinProductos">No agregaste nada 😞</div>
-                <Link to="/"><button className="volverInicio">VOLVER A HOME</button></Link>
-            </>
+            <div className="carritoVacio">
+                <div className="sinProductos">No agregaste nada 😞
+                    <Link to="/"><button className="volverInicio">VOLVER A HOME</button></Link>
+                </div>
+            </div>
         )
     }
     return (
@@ -24,7 +25,7 @@ const Cart = () => {
                 <div className="carritoItem">
                     {cart.map((prod) => (
                         <>
-                            <li className="itemInfo" key={prod.id}> {prod.quantity} "{prod.name}" ${prod.price}     <img className="img" src={prod.img}/>
+                            <li className="itemInfo" key={prod.id}> Llevas {prod.cantidad} "{prod.name}" ${prod.price}     <img className="img" src={prod.img} />
                                 <button className="eliminarProducto" onClick={() => removeItem(prod.id)}>
                                     X
                                 </button>
