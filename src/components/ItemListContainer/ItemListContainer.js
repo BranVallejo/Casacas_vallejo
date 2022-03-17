@@ -4,14 +4,16 @@ import { traerProductos } from "../mock/products";
 import ItemList from "../ItemList";
 import { getCategory } from "../mock/products";
 import { useParams } from "react-router-dom";
-import {RiLoader4Line} from "react-icons/ri"
+import { RiLoader4Line } from "react-icons/ri"
 import "./ItemListContainer.css"
 import { useNoticationServices } from "../../services/notification/NotificationServices";
+import { getDocs, collection, query, where } from "firebase/firestore"
+import { firestoreDb } from "../../services/firebase/firebase"
 
-const ItemListContainer = ({greeting}) => {
-    
+const ItemListContainer = ({ greeting }) => {
+
     const [products, setProducts] = useState([])
-    const {categoryId} = useParams()
+    const { categoryId } = useParams()
     const [loading, setLoading] = useState(true)
 
     const setNotification = useNoticationServices()
@@ -19,34 +21,40 @@ const ItemListContainer = ({greeting}) => {
     useEffect(() => {
         setNotification(`success`, `Bienvenido`)
 
-        getCategory(categoryId).then((products) =>{
+
+    },[])
+
+
+
+    useEffect(() => {
+
+        const collectionRef = categoryId ?
+            query(collection(firestoreDb, "products"), where("category", "==", categoryId)) :
+            collection(firestoreDb, "products")
+
+        getDocs(collectionRef).then(response => {
+            const products = response.docs.map(doc => {
+                console.log(doc)
+                return { id: doc.id, ...doc.data() }
+            })
+            console.log(products)
             setProducts(products)
-        })
-    },[categoryId, products])
-
-
-    useEffect(()=>{
-        traerProductos.then((res)=>{
-            setProducts(res)
-        });
-        traerProductos.catch((error)=>{
-            console.log(error);
-        })
-        traerProductos.finally(()=>{
-            // Se ejecuta al final, siempre.
+        }).finally(() => {
             setLoading(false)
+
         })
+
     }, []);
-    
+
 
     return (
         <>
             {loading ? (
-                <RiLoader4Line className="carga" size={250}/>
+                <RiLoader4Line className="carga" size={250} />
             ) : (
                 <>
                     <h1>{greeting}</h1>
-                    <ItemList products={products}/>            
+                    <ItemList products={products} />
                 </>
             )}
         </>

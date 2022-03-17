@@ -3,7 +3,8 @@ import Button from "../Button/Button";
 import CardWidget from "../CardWidget/CardWidget";
 import "../CardWidget/CardWidget.css"
 import { NavLink } from "react-router-dom";
-
+import { getDocs, collection } from "firebase/firestore";
+import { firestoreDb } from "../../services/firebase/firebase";
 
 const Navbar = () =>{
     return (

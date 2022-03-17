@@ -5,8 +5,8 @@ import "./ItemDetailContainer.css"
 import { useParams } from "react-router-dom"
 import {RiLoader4Line} from "react-icons/ri"
 import "./ItemDetailContainer.css"
-
-
+import { getDoc, doc } from "firebase/firestore"
+import { firestoreDb } from "../../services/firebase/firebase"
 
 const ItemDetailContainer = (products) => {
 
@@ -18,12 +18,15 @@ const ItemDetailContainer = (products) => {
 
 
     useEffect(()=>{
-      traerProduct(productId).then(res=>{
-        setProduct(res)
-      })
-      traerProduct().finally(()=>{
-        setLoading(false)
-      })
+
+     const docRef = doc(firestoreDb, "products", productId)
+
+     getDoc(docRef).then(response => {
+       const product = {id: response.id, ...response.data()}
+       setProduct(product)
+     }).finally(() =>{
+       setLoading(false)
+     })
     })
 
     return(
