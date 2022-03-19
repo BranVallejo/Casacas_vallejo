@@ -49,6 +49,6 @@ export const NotificationServicesProvider = ({children}) => {
     )
 }
 
-export const useNoticationServices = () =>{
+export const useNotificationServices = () =>{
     return useContext(NotificationContext)
 }

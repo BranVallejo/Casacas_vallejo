@@ -2,7 +2,7 @@ import ItemCount from "../ItemCount/ItemCount"
 import { useState, useContext } from "react"
 import { Link } from "react-router-dom"
 import { CartContext } from "../../context/CartContext"
-import { useNoticationServices } from "../../services/notification/NotificationServices"
+import { useNotificationServices } from "../../services/notification/NotificationServices"
 
 const ItemDetail = ({product}) => {
 
@@ -12,7 +12,7 @@ const ItemDetail = ({product}) => {
 
     const {addToCart} = useContext(CartContext)  
 
-    const setNotification = useNoticationServices()
+    const setNotification = useNotificationServices()
 
 
 

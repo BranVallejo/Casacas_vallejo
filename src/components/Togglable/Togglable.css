@@ -1,0 +1,40 @@
+
+.button-togglable-agregar {
+    padding: 6px;
+    background-color: #F5F5F5;
+    bottom: 100px;
+    border: 1px solid #47a8bd;
+    border-radius: 10px;
+    transition: ease-in 0.1s;
+    color: #47a8bd;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 1px 1px 3px 2px rgb(0 0 0 / 27%); 
+    margin: 10px;
+}
+
+.button-togglable-agregar:hover{
+    background-color: #47a8bd;
+    color: #F5F5F5;
+}
+
+.button-togglable-cancelar{
+    padding: 6px;
+    background-color: #ff4242;
+    bottom: 100px;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+    transition: ease-in 0.1s;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 1px 1px 3px 2px rgb(0 0 0 / 27%); 
+    margin: 10px;
+}
+
+.button-togglable-cancelar:hover{
+    background-color: #ffffff;
+    color: #ff4242;
+    border: 1px solid #ff4242;
+
+}

@@ -6,7 +6,7 @@ import { getCategory } from "../mock/products";
 import { useParams } from "react-router-dom";
 import { RiLoader4Line } from "react-icons/ri"
 import "./ItemListContainer.css"
-import { useNoticationServices } from "../../services/notification/NotificationServices";
+import { useNotificationServices } from "../../services/notification/NotificationServices";
 import { getDocs, collection, query, where } from "firebase/firestore"
 import { firestoreDb } from "../../services/firebase/firebase"
 
@@ -16,7 +16,7 @@ const ItemListContainer = ({ greeting }) => {
     const { categoryId } = useParams()
     const [loading, setLoading] = useState(true)
 
-    const setNotification = useNoticationServices()
+    const setNotification = useNotificationServices()
 
     useEffect(() => {
         setNotification(`success`, `Bienvenido`)
@@ -44,7 +44,7 @@ const ItemListContainer = ({ greeting }) => {
 
         })
 
-    }, []);
+    }, [categoryId]);
 
 
     return (

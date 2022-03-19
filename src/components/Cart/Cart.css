@@ -28,7 +28,7 @@
 
 .eliminarProducto{    
     padding: .3vw;
-    background-color: #d12a2a;
+    background-color: #ff4242;
     border: 1px solid #ffffff;
     border-radius: 10px;
     transition: ease-in 0.1s;
@@ -41,8 +41,8 @@
 
 .eliminarProducto:hover{
     background-color: #fdfdfd;
-    color: #d12a2a;
-    border: 1px solid #d12a2a;
+    color: #ff4242;
+    border: 1px solid #ff4242;
     font-weight: 700;
 }
 
@@ -50,10 +50,10 @@
     padding: 6px;
     background-color: #F5F5F5;
     bottom: 100px;
-    border: 1px solid #084391;
+    border: 1px solid #645DD7;
     border-radius: 10px;
     transition: ease-in 0.1s;
-    color: #084391;
+    color: #645DD7;
     cursor: pointer;
     font-weight: 600;
     box-shadow: 1px 1px 3px 2px rgb(0 0 0 / 27%);
@@ -61,7 +61,7 @@
 }
 
 .vaciarCarrito:hover{
-    background-color: #084391;
+    background-color: #645DD7;
     color: #F5F5F5;
 }
 
@@ -69,10 +69,10 @@
     padding: 6px;
     background-color: #F5F5F5;
     bottom: 100px;
-    border: 1px solid #20dd4f;
+    border: 1px solid #2fac78;
     border-radius: 10px;
     transition: ease-in 0.1s;
-    color: #20dd4f;
+    color: #2fac78;
     cursor: pointer;
     font-weight: 600;
     box-shadow: 1px 1px 3px 2px rgb(0 0 0 / 27%); 
@@ -80,9 +80,8 @@
 }
 
 .finalizarCompra:hover{
-    background-color: #20dd4f;
+    background-color: #2fac78;
     color: #F5F5F5;
-
 }
 
 .carritoVacio{
@@ -95,7 +94,7 @@
 
 .sinProductos{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    width: 400px;
+     width: 400px;
     height: auto;
     padding: 10px 10px;
     margin-top: 30px;
@@ -140,4 +139,24 @@
 .img{
     width: 20%;
     border-radius: 10px;
+}
+
+.botonContacto{
+    padding: 6px;
+    background-color: #F5F5F5;
+    bottom: 100px;
+    border: 1px solid #FF4242;
+    border-radius: 10px;
+    transition: ease-in 0.1s;
+    color: #FF4242;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 1px 1px 3px 2px rgb(0 0 0 / 27%); 
+    margin: 10px;
+}
+
+.botonContacto:hover{
+    background-color: #FF4242;
+    color: #F5F5F5;
+
 }
