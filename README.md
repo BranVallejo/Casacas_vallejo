@@ -1,5 +1,5 @@
 # Casacas, la casa de todos los hinchas
-Una e-commerce de camisetas de fútbol, hecho en React.
+Un e-commerce de camisetas de fútbol, hecho en React.
 
 ## Tecnologías
   Casacas es una web en la que los hinchas de las principales ligas del fútbol encuentran sus camisetas favoritas. No se limita a camisetas actuales también incluye camisetas retro/vintage de los momentos más memorables de este deporte.
@@ -66,6 +66,4 @@ En las cards se encuentra la siguiente información:
   Nombre del producto (Equipo, Temporada o Año, Titularidad de la camiseta).
   Imagen del producto.
   Precio del producto.
-  Botón para comprar.
   Ver detalle.
-Esta información me parece la justa y suficiente para el usuario. En el apartado de detalles hay una descripción genérica que debo cambiar.
