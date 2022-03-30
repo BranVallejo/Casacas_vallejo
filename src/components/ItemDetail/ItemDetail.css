@@ -1,0 +1,18 @@
+.irAlCarrito{
+    padding: 6px;
+    background-color: #F5F5F5;
+    bottom: 100px;
+    border: 1px solid #2fac78;
+    border-radius: 10px;
+    transition: ease-in 0.1s;
+    color: #2fac78;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 1px 1px 3px 2px rgb(0 0 0 / 27%); 
+    margin: 10px;
+}
+
+.irAlCarrito:hover{
+    background-color: #2fac78;
+    color: #F5F5F5;
+}

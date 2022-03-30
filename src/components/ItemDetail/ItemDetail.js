@@ -3,6 +3,7 @@ import { useState, useContext } from "react"
 import { Link } from "react-router-dom"
 import { CartContext } from "../../context/CartContext"
 import { useNotificationServices } from "../../services/notification/NotificationServices"
+import "./ItemDetail.css";
 
 const ItemDetail = ({product}) => {
 
@@ -37,7 +38,7 @@ const ItemDetail = ({product}) => {
                 (compraFinalizada == false) ? (<ItemCount stock={product.stock} initial={1} onAdd={handleCheckout}/>
                 ) : (
                     <>
-                        <Link to={`/cart`}><button>Ir al carrito</button></Link>
+                        <Link to={`/cart`}><button className="irAlCarrito" >Ir al carrito</button></Link>
                     </>
                 )
             }

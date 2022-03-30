@@ -8,7 +8,6 @@ const Item = ({product}) =>{
                 <p className="nombreCamiseta">{product.name}</p>
                 <img className="fotoProducto" src={product.img}/>
                 <p className="product-price">${product.price} USD</p>
-                <p className="comprar">Agregar al carrito</p>
                 <p><Link to={`/detail/${product.id}`} className="detalle">Ver detalle</Link></p>
             </div>
             

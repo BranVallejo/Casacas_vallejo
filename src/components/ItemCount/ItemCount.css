@@ -1,7 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
 .counterBox{
     border: 7px solid black;
     width: max-content;
     border-radius: 15%;
-    box-shadow: 7px 7px 5px gainsboro;
+    box-shadow: 7px 7px 5px rgb(134, 134, 134);
     margin: 0 auto;
+    padding: 10px;
+    font-family: 'Nunito', sans-serif;
+
+}
+/* #0f8b8d #ff4242 */
+.Decrement{
+    box-shadow: 1px 3px 14px -2px #4a9d9e;
+	background-color:#0f8b8d;
+	border-radius:10px;
+	border:1px solid #fdfdfd;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:8px 15px;
+	text-shadow:0px 1px 0px #0f8b8d;
+}
+
+.Increment{
+    box-shadow: 1px 3px 14px -2px #4a9d9e;
+	background-color:#0f8b8d;
+	border-radius:10px;
+	border:1px solid #fdfdfd;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:8px 15px;
+	text-shadow:0px 1px 0px #0f8b8d;
+}
+
+.aniadir{
+    bottom: 100px;
+    border: 1px solid rgb(32, 221, 79);
+    width: 250px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: ease-in 0.1s;
+    font-weight: 600;
+
+}
+
+.aniadir:hover{
+    background-color: rgb(32, 221, 79);
+    color: white;
 }

@@ -25,23 +25,9 @@
     border-radius: 10%;
 }
 
+
+
 .product-price{
-    bottom: 100px;
-    border: 1px solid black;
-    width: 250px;
-    margin-left: 18%;
-    padding: 5px;
-    border-radius: 10px;
-    transition: ease-in 0.1s;
-
-}
-
-.product-price:hover{
-    background-color: black;
-    color: white;
-}
-
-.comprar{
     bottom: 100px;
     border: 1px solid rgb(32, 221, 79);
     width: 250px;
@@ -51,7 +37,7 @@
     transition: ease-in 0.1s;
 }
 
-.comprar:hover{
+.product-price:hover{
     background-color: rgb(32, 221, 79);
     color: white;
 }
